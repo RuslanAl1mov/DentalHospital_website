@@ -1,0 +1,271 @@
+{% load static %}
+{% load i18n %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% trans 'Самаркандская областная специализированная детская стоматологическая поликлиника' %}</title>
+    <meta name="description"
+          content="{% trans 'Самаркандская областная специализированная детская стоматологическая поликлиника - ваш надежный партнер в заботе о здоровье улыбок ваших детей. Качественные услуги стоматологического лечения для детей всех возрастов. Запишитесь на прием прямо сейчас!' %}">
+    <meta name="keywords"
+          content="{% trans 'стоматология, детская стоматология, поликлиника, Самарканд, здоровье детей' %}">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Ruslan Al.">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="shortcut icon" type="image/png" href="{% static "img/favicon.ico" %}">
+</head>
+
+<body>
+
+{% include 'components/header.html' %}
+
+<main>
+    <section class="head_section">
+        <div class="contacts_block" style='background-image: url({% static 'img/bg1.webp' %})'>
+            <div class="contacts_conblock_bg">
+                <div class="contacts_conblock">
+                    <div class="main_title_block">
+                        {% trans 'Самаркандская областная специализированная детская стоматологическая поликлиника' %}
+                    </div>
+                    <div class="contact_info_bl hdbl_800">
+                        <div class="cnt_subt_bl">{% trans 'Адрес' %}:</div>
+                        <div class="cnt_inf_txt">{% trans 'Самаркандская область, г.Самарканд, ул.Нодирабегим 5/4' %}</div>
+                    </div>
+                    <div class="contact_info_bl hdbl_800">
+                        <div class="cnt_subt_bl">{% trans 'Контакты' %}:</div>
+                        <ul class="contact_info_list">
+                            <li><a class="cnt_link" href="tel:+998662345038">+998(66) 234-50-38</a></li>
+                            <li><a class="cnt_link" href="tel:+998662345364">+998(66) 234-53-64</a></li>
+                            <li>
+                                <div class="socials_block">
+                                    <a class="social_link" href="https://t.me/svibsp" target="_blank">
+                                        <img class="socials_icon" alt="" src="{% static 'img/telegram.svg' %}">
+                                    </a>
+                                    <a class="social_link" target="_blank"
+                                       href="https://www.instagram.com/svibsp?igsh=MXc0N3hwZ2Y1eDV2cw%3D%3D&utm_source=qr">
+                                        <img class="socials_icon" alt="" src="{% static 'img/instagram.svg' %}">
+                                    </a>
+                                    <a class="social_link" target="_blank"
+                                       href="https://www.facebook.com/profile.php?id=61557500293469">
+                                        <img class="socials_icon" alt="" src="{% static 'img/facebook.svg' %}">
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slider_block" style='background-image: url({% static 'img/slider.webp' %})'>
+            <div class="slider_block_title">{% trans 'Добро пожаловать!' %}</div>
+        </div>
+    </section>
+
+    <section class="services_section" id="service_section">
+        <div class="services_block">
+            <div class="subm_title_bl">{% trans 'Наши услуги' %}</div>
+            <div class="serv_list">
+                <div class="serv_vert_bl">
+                    <div class="service_block_outer">
+                        <div class="service_block_item">
+                            <a class="service_block_link">
+                                <img class="serv_item_img" alt="" src="{% static 'img/kids.webp' %}">
+                                <div class="serv_bl_title">{% trans 'ДЕТСКАЯ СТОМАТОЛОГИЯ' %}</div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="service_block_outer">
+                        <div class="service_block_item">
+                            <a class="service_block_link">
+                                <img class="serv_item_img" alt="" src="{% static 'img/karies.webp' %}">
+                                <div class="serv_bl_title">{% trans 'ЛЕЧЕНИЕ КАРИЕСА И ЕГО ОСЛОЖНЕНИЙ' %}</div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="service_block_outer">
+                        <div class="service_block_item">
+                            <a class="service_block_link">
+                                <img class="serv_item_img" alt="" src="{% static 'img/ortodontiya.webp' %}">
+                                <div class="serv_bl_title">{% trans 'ОРТОДОНТИЯ' %}</div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="service_block_outer">
+                        <div class="service_block_item">
+                            <a class="service_block_link">
+                                <img class="serv_item_img" alt="" src="{% static 'img/cifra.webp' %}">
+                                <div class="serv_bl_title">{% trans 'ЦИФРОВАЯ СТОМАТОЛОГИЯ' %}</div>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="about_section" id="about_section" style='background-image: url({% static 'img/bg2.webp' %})'>
+        <div class="about_block">
+            <div class="about_title_bl">{% trans 'О поликлинике' %}</div>
+            <p class="about_text">{% trans 'Добро пожаловать в Государственную детскую стоматологическую поликлинику!' %}</p>
+            <p class="about_text">{% trans 'Мы - ваш надежный партнер в поддержании здоровья и улыбок вашего ребенка. В нашей поликлинике вы найдете профессиональный подход к лечению и профилактике стоматологических заболеваний. Наша команда опытных врачей осуществляет комплексное обслуживание, обеспечивая заботу и комфорт наших маленьких пациентов. Мы стремимся создать дружественную и безопасную атмосферу, чтобы каждый визит к нам был приятным и эффективным. Помимо бесплатных услуг для детей, мы также предлагаем широкий спектр платных услуг для взрослых. Наша цель - помогать всей семье сохранять здоровье и красоту улыбок на долгие годы вперед. Мы приглашаем вас стать частью нашего сообщества и доверить нам заботу о вашем здоровье и здоровье ваших близких' %}.</p>
+
+        </div>
+    </section>
+
+    <section class="stuff_section" id="stuff_section">
+        <div class="stuff_block">
+            <div class="subm_title_bl">{% trans 'Наши специалисты' %}</div>
+            <div class="scrollable_block">
+
+                <div class="items-wrap">
+                    <div class="items marquee">
+                        <div class="staff_item">
+                            <img class="staff_item_photo" alt="" src="{% static 'img/doctors/glav.webp' %}">
+                            <p class="staff_name_text">{% trans 'Рахимбердиев Рустам Абдуносирович' %}</p>
+                            <p class="staff_info_text">{% trans 'Главный врач поликлиники, доктор наук' %}</p>
+                        </div>
+
+                        <div class="staff_item">
+                            <img class="staff_item_photo" alt="" src="{% static 'img/doctors/doct1.webp' %}">
+                            <p class="staff_name_text">{% trans 'Куйчиев Ботир Суюнович' %}</p>
+                            <p class="staff_info_text">{% trans 'Заведуюший отделением, стаж 33 года' %}</p>
+                        </div>
+
+                        <div class="staff_item">
+                            <img class="staff_item_photo" alt="" src="{% static 'img/doctors/doct2.webp' %}">
+                            <p class="staff_name_text">{% trans 'Амонуллаев Мизроб Шукуруллоевич' %}</p>
+                            <p class="staff_info_text">{% trans 'Терапевт-стоматолог, стаж 12 лет' %}</p>
+                        </div>
+
+                        <div class="staff_item">
+                            <img class="staff_item_photo" alt="" src="{% static 'img/doctors/doct3.webp' %}">
+                            <p class="staff_name_text">{% trans 'Нарманов Шокиржон Шароб угли' %}</p>
+                            <p class="staff_info_text">{% trans 'Ортодонт-стоматолог, стаж 5 лет' %}</p>
+                        </div>
+
+                        <div class="staff_item">
+                            <img class="staff_item_photo" alt="" src="{% static 'img/doctors/doct5.webp' %}">
+                            <p class="staff_name_text">{% trans 'Мухаммадиев Жасур Фуркатович' %}</p>
+                            <p class="staff_info_text">{% trans 'Хирург-стоматолог, стаж 7 лет' %}</p>
+                        </div>
+
+                        <div class="staff_item">
+                            <img class="staff_item_photo" alt="" src="{% static 'img/doctors/doct4.webp' %}">
+                            <p class="staff_name_text">{% trans 'Сатторов Шахзод Баходирович' %}</p>
+                            <p class="staff_info_text">{% trans 'Ортодонт-стоматолог' %}</p>
+                        </div>
+                    </div>
+                    <div aria-hidden="true" class="items marquee">
+                        <div class="staff_item">
+                            <img class="staff_item_photo" alt="" src="{% static 'img/doctors/glav.webp' %}">
+                            <p class="staff_name_text">{% trans 'Рахимбердиев Рустам Абдуносирович' %}</p>
+                            <p class="staff_info_text">{% trans 'Главный врач поликлиники, доктор наук' %}</p>
+                        </div>
+
+                        <div class="staff_item">
+                            <img class="staff_item_photo" alt="" src="{% static 'img/doctors/doct1.webp' %}">
+                            <p class="staff_name_text">{% trans 'Куйчиев Ботир Суюнович' %}</p>
+                            <p class="staff_info_text">{% trans 'Заведуюший отделением, стаж 33 года' %}</p>
+                        </div>
+
+                        <div class="staff_item">
+                            <img class="staff_item_photo" alt="" src="{% static 'img/doctors/doct2.webp' %}">
+                            <p class="staff_name_text">{% trans 'Амонуллаев Мизроб Шукуруллоевич' %}</p>
+                            <p class="staff_info_text">{% trans 'Терапевт-стоматолог, стаж 12 лет' %}</p>
+                        </div>
+
+                        <div class="staff_item">
+                            <img class="staff_item_photo" alt="" src="{% static 'img/doctors/doct3.webp' %}">
+                            <p class="staff_name_text">{% trans 'Нарманов Шокиржон Шароб угли' %}</p>
+                            <p class="staff_info_text">{% trans 'Ортодонт-стоматолог, стаж 5 лет' %}</p>
+                        </div>
+
+                        <div class="staff_item">
+                            <img class="staff_item_photo" alt="" src="{% static 'img/doctors/doct5.webp' %}">
+                            <p class="staff_name_text">{% trans 'Мухаммадиев Жасур Фуркатович' %}</p>
+                            <p class="staff_info_text">{% trans 'Хирург-стоматолог, стаж 7 лет' %}</p>
+                        </div>
+
+                        <div class="staff_item">
+                            <img class="staff_item_photo" alt="" src="{% static 'img/doctors/doct4.webp' %}">
+                            <p class="staff_name_text">{% trans 'Сатторов Шахзод Баходирович' %}</p>
+                            <p class="staff_info_text">{% trans 'Ортодонт-стоматолог' %}</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="contacts_section" id="contacts_section" style='background-image: url({% static 'img/bg3.webp' %})'>
+        <div class="services_section_block">
+            <div class="about_title_bl">{% trans 'Контакты' %}:</div>
+            <div class="contacts_conblock -full_width">
+                <div class="contact_info_bl">
+                    <div class="cnt_subt_bl">{% trans 'Адрес' %}:</div>
+                    <div class="cnt_inf_txt">{% trans 'Самаркандская область, г.Самарканд, ул.Нодирабегим 5/4' %}</div>
+                </div>
+                <div class="contact_info_bl">
+                    <div class="cnt_subt_bl">{% trans 'Контакты' %}:</div>
+                    <ul class="contact_info_list">
+                        <li><a class="cnt_link" href="tel:+998662345038">+998(66) 234-50-38</a></li>
+                        <li><a class="cnt_link" href="tel:+998662345364">+998(66) 234-53-64</a></li>
+                    </ul>
+                </div>
+                <div class="contact_info_bl">
+                    <div class="cnt_subt_bl">{% trans 'Соц.сети' %}:</div>
+                    <div class="socials_block">
+                        <a class="social_link" href="https://t.me/svibsp" target="_blank">
+                            <img class="socials_icon" alt="" src="{% static 'img/telegram.svg' %}">
+                        </a>
+                        <a class="social_link" target="_blank"
+                           href="https://www.instagram.com/svibsp?igsh=MXc0N3hwZ2Y1eDV2cw%3D%3D&utm_source=qr">
+                            <img class="socials_icon" alt="" src="{% static 'img/instagram.svg' %}">
+                        </a>
+                        <a class="social_link" href="https://www.facebook.com/profile.php?id=61557500293469"
+                           target="_blank">
+                            <img class="socials_icon" alt="" src="{% static 'img/facebook.svg' %}">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="main_map_block">
+                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aeb723a53f60f166e841399e708c45dd430641ae49f3e8c9f9a7758fbf83a3b91&amp;source=constructor"
+                        width="100%" height="490" frameborder="0"></iframe>
+            </div>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<script>
+    function openMenu() {
+        document.querySelector("header").classList.add("-header__show");
+        document.querySelector("#main_menu").classList.add("-menu__show");
+        document.querySelector("#secondary_menu").classList.add("-secondary_menu__close");
+    }
+
+    function closeMenu() {
+        document.querySelector("header").classList.remove("-header__show");
+        document.querySelector("#main_menu").classList.remove("-menu__show");
+        document.querySelector("#secondary_menu").classList.remove("-secondary_menu__close");
+    }
+</script>
+
+</body>
+
+</html>

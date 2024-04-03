@@ -1,0 +1,73 @@
+{% load static %}
+{% load i18n %}
+
+<header>
+    <div class="header_block">
+        <div class="sm_hd_items" id="secondary_menu">
+
+            <div class="menu_btn_block">
+                <a onclick="openMenu()">
+                    <svg class="menu_icon">
+                        <use href="{% static 'img/icons.svg' %}#menu"></use>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="header_logo_block">
+                <a href="{% url 'home_page' %}" onclick="closeMenu()">
+                    <img alt="" src="{% static 'img/logo_med.webp' %}">
+                </a>
+            </div>
+
+        </div>
+        <div class="menu_scroll" id="main_menu">
+            <ul class="menu_list">
+                <li class="menu_list_item">
+                    <div class="header_logo_block">
+                        <a href="{% url 'home_page' %}" onclick="closeMenu()"><img alt=""
+                                                                                   src="{% static 'img/logo_med.webp' %}"></a>
+                    </div>
+                </li>
+                <li class="menu_list_item">
+                    <a href="{% url 'home_page' %}" onclick="closeMenu()">{% trans 'Главная' %}</a>
+                </li>
+                <li class="menu_list_item">
+                    <a href="{% url 'home_page' %}#about_section" onclick="closeMenu()">{% trans 'О поликлинике' %}</a>
+                </li>
+                <li class="menu_list_item">
+                    <a href="{% url 'home_page' %}#service_section" onclick="closeMenu()">{% trans 'Услуги' %}</a>
+                </li>
+                <li class="menu_list_item">
+                    <a href="{% url 'home_page' %}#stuff_section" onclick="closeMenu()">{% trans 'Специалисты' %}</a>
+                </li>
+                <li class="menu_list_item">
+                    <a href="{% url 'home_page' %}#contacts_section" onclick="closeMenu()">{% trans 'Контакты' %}</a>
+                </li>
+                <li class="menu_list_item">
+                    <div class="languages_block">
+
+                        <form class="languages_block" id="language_form" action="{% url 'set_language' %}" method="post">
+                            {% csrf_token %}
+
+                            {% get_current_language as LANGUAGE_CODE %}
+                            {% get_available_languages as LANGUAGES %}
+                            {% get_language_info_list for LANGUAGES as languages %}
+
+                            <input id="language_input" type="hidden" name="language" value="">
+                            <a onclick="changeLanguage('ru')"><img class="lang_img" alt="" src="{% static 'img/lang_ru.webp' %}"></a>
+                            <a onclick="changeLanguage('uz')"><img class="lang_img" alt="" src="{% static 'img/lang_uz.webp' %}"></a>
+                        </form>
+
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function changeLanguage(language) {
+            document.getElementById("language_input").value = language;
+            document.getElementById("language_form").submit();
+        }
+    </script>
+</header>
